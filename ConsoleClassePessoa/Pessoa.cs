@@ -8,9 +8,26 @@ namespace ConsoleClassePessoa
 {
     class Pessoa
     {
-        string nome;
-        string idade;
-        string rg;
-        string cpf;
+        public string nome;
+        public int idade;
+        //Só define como int quando for fazer cálculos com o número
+        public string rg;
+        public string cpf;
+
+        public void Acenar(Pessoa pessoa)
+        {
+            Console.WriteLine("{0} acenou para {1}", this.nome, pessoa.nome);
+        }
+
+        public void PerguntaIdade(Pessoa pessoa)
+        {
+            Console.WriteLine("{0}, qual a sua idade?", pessoa.nome);
+            pessoa.RespostaIdade();
+        }
+
+        public void RespostaIdade()
+        {
+            Console.WriteLine("Eu tenho {0} anos.", this.idade);
+        }
     }
 }
